@@ -5,7 +5,7 @@ import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
    const INITIAL_STATE = [
-      {id: uuid(), color: "Blue", height: "200px", width: "350px"}
+      {id: 5, color: "Blue", height: "200", width: "350"}
    ]
 
    const [boxes, setBoxes] = useState(INITIAL_STATE);

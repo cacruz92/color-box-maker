@@ -18,7 +18,7 @@ const Box = ({color='blue', width='300', height='200', id, removeBox}) => {
     }
     return (
         <>
-        <div style={boxStyle}>
+        <div style={boxStyle} id={id}>
         </div>
         <button onClick={handleClick}>X</button>
         </>
