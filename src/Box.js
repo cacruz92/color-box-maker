@@ -8,7 +8,8 @@ const Box = ({color='blue', width='300', height='200'}) => {
         backgroundColor: color,
         width: addPx(width),
         height: addPx(height),
-        display: 'inline-block'
+        display: 'inline-block',
+        border: '1px solid black'
     }
 
     return (
