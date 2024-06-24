@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./NewBoxForm.css"
 
 const NewBoxForm = () => {
     const INITIAL_STATE = {
@@ -16,8 +17,15 @@ const NewBoxForm = () => {
         }))
     }
 
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        setFormData(INITIAL_STATE)
+    }
+
     return(
-        <form>
+        <div className="container">
+        <form className="newBoxForm" onSubmit={handleSubmit}>
+        <h1>Box List App:</h1>
             <label htmlFor="color">Color: </label>
             <input 
             id="color" 
@@ -27,7 +35,36 @@ const NewBoxForm = () => {
             value={formData.color}
             onChange={handleChange}
              />
+
+            <br></br>
+
+            <label htmlFor="height">Height: </label>
+            <input 
+            id="height" 
+            type="text"
+            name="height"
+            placeholder="Height (px)"
+            value={formData.height}
+            onChange={handleChange}
+             />
+
+            <br></br>
+
+            <label htmlFor="width">Width: </label>
+            <input 
+            id="width" 
+            type="text"
+            name="width"
+            placeholder="Width (px)"
+            value={formData.width}
+            onChange={handleChange}
+             />
+
+             <br></br>
+
+             <button>Add Box</button>
         </form>
+        </div>
     )
 }
 

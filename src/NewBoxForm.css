@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    place-items: start center;
+    height: 100%;
+  }
+  .newBoxForm{
+    background-color: whitesmoke;
+    height: 200px;
+    width: 250px;
+    margin-bottom: 20px;
+    font-size: large;
+    text-align: right;
+    padding-right: 40px;
+  }
