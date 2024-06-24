@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./NewBoxForm.css"
 
-const NewBoxForm = () => {
+const NewBoxForm = ({addBox}) => {
     const INITIAL_STATE = {
         color: '',
         height: '',
@@ -19,7 +19,8 @@ const NewBoxForm = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        setFormData(INITIAL_STATE)
+        addBox({...formData});
+        setFormData(INITIAL_STATE);
     }
 
     return(

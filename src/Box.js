@@ -1,10 +1,13 @@
 import React, {useState} from "react";
 
-const Box = ({color='blue', width='300px', height='200px'}) => {
+const Box = ({color='blue', width='300', height='200'}) => {
+    const addPx = (value) => {
+        return `${value}px`
+    }
     const boxStyle = {
         backgroundColor: color,
-        width: width,
-        height: height,
+        width: addPx(width),
+        height: addPx(height),
         display: 'inline-block'
     }
 
@@ -15,3 +18,4 @@ const Box = ({color='blue', width='300px', height='200px'}) => {
 }
 
 export default Box;
+
